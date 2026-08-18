@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hood Law | Consumer Litigation, Foreclosure Defense &amp; Real Estate Attorney — Alabama &amp; North Florida</title>
+<meta name="description" content="Rhonda Steadman Hood, LLC. Consumer litigation, foreclosure defense, mortgage servicing issues, real estate redemption, and predatory towing representation in Alabama and North Florida." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ============ Tokens ============ */
+  :root{
+    --ink:#12222d;
+    --ink-soft:#2c3f4b;
+    --paper:#f3f6f7;
+    --paper-raised:#ffffff;
+    --harbor:#1f6f93;
+    --harbor-deep:#12495f;
+    --harbor-pale:#dcedf2;
+    --gold:#c98a35;
+    --gold-deep:#9c6a24;
+    --line:#d6e1e4;
+    --shadow: 0 20px 45px -25px rgba(18,34,45,0.35);
+    --radius: 14px;
+    --maxw: 1120px;
+    --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
+    --font-body: "Public Sans", -apple-system, "Segoe UI", sans-serif;
+
+    /* Fixed tokens for the deliberately-dark impact bands (hero, intro,
+       contact, footer). These stay constant in both light and dark site
+       themes -- only the adaptive tokens above flip. */
+    --band-deep:#0a1a24;
+    --band-mid:#123449;
+    --band-harbor:#1f6f93;
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#eef3f4;
+      --ink-soft:#c3d2d6;
+      --paper:#0d1a21;
+      --paper-raised:#122631;
+      --harbor:#6fb6d6;
+      --harbor-deep:#a7d6e9;
+      --harbor-pale:#173341;
+      --gold:#e8ab5c;
+      --gold-deep:#f2c489;
+      --line:#1f3540;
+      --shadow: 0 20px 45px -25px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#eef3f4;
+    --ink-soft:#c3d2d6;
+    --paper:#0d1a21;
+    --paper-raised:#122631;
+    --harbor:#6fb6d6;
+    --harbor-deep:#a7d6e9;
+    --harbor-pale:#173341;
+    --gold:#e8ab5c;
+    --gold-deep:#f2c489;
+    --line:#1f3540;
+    --shadow: 0 20px 45px -25px rgba(0,0,0,0.6);
+  }
+
+  /* ============ Reset-ish ============ */
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *,*::before,*::after{ animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important; }
+  }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{ display:block; max-width:100%; }
+  a{ color:inherit; }
+  h1,h2,h3{
+    font-family:var(--font-display);
+    font-weight:600;
+    line-height:1.12;
+    text-wrap:balance;
+    margin:0 0 0.5em;
+    color:var(--ink);
+  }
+  p{ margin:0 0 1em; color:var(--ink-soft); max-width:62ch; }
+  .eyebrow{
+    font-family:var(--font-body);
+    font-weight:700;
+    font-size:0.78rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin:0 0 0.9em;
+    display:inline-flex;
+    align-items:center;
+    gap:0.6em;
+  }
+  .eyebrow::before{
+    content:"";
+    width:28px; height:2px;
+    background:var(--gold);
+    display:inline-block;
+  }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+  section{ padding:88px 0; }
+  @media (max-width:640px){ section{ padding:64px 0; } }
+
+  .btn{
+    display:inline-flex; align-items:center; gap:0.6em;
+    font-family:var(--font-body); font-weight:700; font-size:0.98rem;
+    padding:14px 26px; border-radius:999px;
+    text-decoration:none; cursor:pointer; border:1.5px solid transparent;
+    transition:transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color .18s ease;
+  }
+  .btn:focus-visible{ outline:3px solid var(--gold); outline-offset:3px; }
+  .btn-primary{ background:var(--gold); color:#22160a; box-shadow:0 12px 24px -12px rgba(201,138,53,0.55); }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 16px 30px -12px rgba(201,138,53,0.65); }
+  .btn-ghost{ background:transparent; border-color:rgba(255,255,255,0.55); color:#fff; }
+  .btn-ghost:hover{ background:rgba(255,255,255,0.12); transform:translateY(-2px); }
+  .btn-outline{ background:transparent; border-color:var(--harbor); color:var(--harbor); }
+  .btn-outline:hover{ background:var(--harbor-pale); transform:translateY(-2px); }
+
+  .phone-link{ font-variant-numeric:tabular-nums; white-space:nowrap; }
+
+  /* ============ Header ============ */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter:saturate(140%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    max-width:var(--maxw); margin:0 auto; padding:16px 24px;
+    display:flex; align-items:center; justify-content:space-between; gap:24px;
+  }
+  .brand{ display:flex; flex-direction:column; text-decoration:none; line-height:1.05; }
+  .brand-name{ font-family:var(--font-display); font-weight:700; font-size:1.4rem; color:var(--ink); }
+  .brand-sub{ font-size:0.66rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--harbor); font-weight:700; margin-top:4px; }
+  .nav-links{ display:flex; align-items:center; gap:32px; list-style:none; margin:0; padding:0; }
+  .nav-links a{
+    text-decoration:none; font-weight:600; font-size:0.95rem; color:var(--ink-soft);
+    position:relative; padding:4px 0;
+  }
+  .nav-links a::after{
+    content:""; position:absolute; left:0; right:100%; bottom:-2px; height:2px; background:var(--gold);
+    transition:right .22s ease;
+  }
+  .nav-links a:hover::after, .nav-links a:focus-visible::after{ right:0; }
+  .nav-cta{ display:flex; align-items:center; gap:14px; }
+  .nav-call{
+    display:inline-flex; align-items:center; gap:8px; text-decoration:none;
+    font-weight:700; color:var(--harbor-deep); font-size:0.95rem;
+  }
+  .nav-call svg{ width:18px; height:18px; }
+  .nav-toggle{
+    display:none; background:none; border:1.5px solid var(--line); border-radius:10px;
+    width:42px; height:42px; align-items:center; justify-content:center; cursor:pointer;
+  }
+  .nav-toggle svg{ width:20px; height:20px; }
+  .only-mobile{ display:none; }
+
+  @media (max-width:860px){
+    .only-mobile{ display:block; margin-top:6px; }
+    .nav-links{
+      position:absolute; top:100%; left:0; right:0; flex-direction:column; align-items:flex-start;
+      background:var(--paper-raised); border-bottom:1px solid var(--line);
+      padding:20px 24px; gap:18px; box-shadow:var(--shadow);
+      display:none;
+    }
+    .nav-links.open{ display:flex; }
+    .nav-toggle{ display:inline-flex; }
+    .nav-cta .btn-primary{ display:none; }
+  }
+
+  /* ============ Hero ============ */
+  .hero{
+    position:relative; overflow:hidden; padding:0;
+    background: radial-gradient(120% 140% at 15% 0%, var(--band-mid) 0%, var(--band-deep) 62%);
+    color:#fff;
+  }
+  .hero-inner{
+    max-width:var(--maxw); margin:0 auto; padding:120px 24px 110px;
+    position:relative; z-index:2;
+  }
+  .hero-horizon{
+    position:absolute; inset:0; z-index:1; opacity:0.55; pointer-events:none;
+  }
+  .hero .eyebrow{ color:var(--gold); }
+  .hero .eyebrow::before{ background:var(--gold); }
+  .hero h1{
+    color:#fff; font-size:clamp(2.4rem, 5.2vw, 4rem); max-width:14ch; letter-spacing:-0.01em;
+  }
+  .hero-lede{ color:rgba(255,255,255,0.82); font-size:1.12rem; max-width:52ch; margin-bottom:2em; }
+  .hero-actions{ display:flex; flex-wrap:wrap; gap:16px; align-items:center; }
+  .hero-badges{
+    display:flex; gap:28px; margin-top:64px; flex-wrap:wrap;
+    border-top:1px solid rgba(255,255,255,0.18); padding-top:28px;
+  }
+  .hero-badge{ display:flex; flex-direction:column; gap:2px; }
+  .hero-badge b{ font-family:var(--font-display); font-size:1.5rem; color:var(--gold); }
+  .hero-badge span{ font-size:0.8rem; color:rgba(255,255,255,0.72); }
+
+  /* ============ Intro band ============ */
+  .intro-band{
+    background:linear-gradient(135deg, var(--band-harbor) 0%, var(--band-mid) 100%);
+    color:#fff; text-align:center;
+  }
+  .intro-band h2{ color:#fff; font-size:clamp(1.7rem, 3.4vw, 2.4rem); }
+  .intro-band p{ color:rgba(255,255,255,0.88); max-width:62ch; margin:0 auto; font-size:1.08rem; }
+
+  /* ============ Why section ============ */
+  .why{ display:grid; grid-template-columns: 1fr; gap:56px; }
+  .why-block + .why-block{ border-top:1px solid var(--line); padding-top:48px; margin-top:8px; }
+  .why h2{ font-size:clamp(1.5rem, 2.8vw, 2rem); }
+  .why-list{
+    list-style:none; margin:1.6em 0; padding:0;
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px 24px;
+  }
+  .why-list li{
+    display:flex; align-items:center; gap:10px; font-weight:600; color:var(--ink);
+    padding:12px 16px; background:var(--paper-raised); border:1px solid var(--line); border-radius:10px;
+  }
+  .why-list li svg{ width:18px; height:18px; color:var(--gold); flex:none; }
+
+  /* ============ Practice areas ============ */
+  .practice{ background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .practice-head{ text-align:center; max-width:640px; margin:0 auto 56px; }
+  .practice-head p{ margin:0 auto; }
+  .practice-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(230px,1fr)); gap:22px;
+  }
+  .practice-card{
+    background:var(--paper); border:1px solid var(--line); border-radius:var(--radius);
+    padding:30px 26px; animation:fadeUp .6s ease both;
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  }
+  .practice-card:nth-child(2){ animation-delay:.06s; }
+  .practice-card:nth-child(3){ animation-delay:.12s; }
+  .practice-card:nth-child(4){ animation-delay:.18s; }
+  .practice-card:nth-child(5){ animation-delay:.24s; }
+  .practice-card:hover{ box-shadow:var(--shadow); border-color:var(--harbor); transform:translateY(-4px); }
+  .practice-icon{
+    width:52px; height:52px; border-radius:14px; background:var(--harbor-pale); color:var(--harbor-deep);
+    display:flex; align-items:center; justify-content:center; margin-bottom:20px;
+  }
+  .practice-icon svg{ width:28px; height:28px; }
+  .practice-card h3{ font-size:1.15rem; margin-bottom:0.4em; }
+  .practice-card p{ font-size:0.92rem; margin:0; }
+
+  /* ============ Contact CTA ============ */
+  .contact{ background:var(--band-deep); color:#fff; }
+  .contact h2{ color:#fff; }
+  .contact .eyebrow{ color:var(--gold); }
+  .contact .eyebrow::before{ background:var(--gold); }
+  .contact > .wrap > p{ color:rgba(255,255,255,0.78); font-size:1.05rem; }
+  .offices{
+    margin-top:48px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px;
+  }
+  .office-card{
+    background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.14); border-radius:var(--radius);
+    padding:28px;
+  }
+  .office-card h3{
+    color:var(--gold); font-family:var(--font-body); font-weight:800; font-size:0.82rem;
+    text-transform:uppercase; letter-spacing:0.1em; margin-bottom:14px;
+  }
+  .office-card address{ font-style:normal; color:rgba(255,255,255,0.9); margin-bottom:16px; line-height:1.7; }
+  .office-card .office-phones{ display:flex; flex-direction:column; gap:6px; }
+  .office-card a{ text-decoration:none; font-weight:700; color:#fff; }
+  .office-card a:hover{ color:var(--gold); }
+  .office-card .fax{ color:rgba(255,255,255,0.6); font-weight:500; font-size:0.9rem; }
+
+  /* ============ Footer ============ */
+  footer{ background:var(--band-deep); border-top:1px solid rgba(255,255,255,0.12); padding:28px 0; }
+  .footer-inner{
+    display:flex; flex-wrap:wrap; justify-content:space-between; gap:14px; align-items:center;
+    color:rgba(255,255,255,0.6); font-size:0.85rem;
+  }
+  .footer-links{ display:flex; gap:20px; list-style:none; margin:0; padding:0; }
+  .footer-links a{ color:rgba(255,255,255,0.6); text-decoration:none; }
+  .footer-links a:hover{ color:#fff; }
+
+  /* ============ Entrance animation (CSS-only, no scroll/JS dependency) ============ */
+  @keyframes fadeUp{
+    from{ opacity:0; transform:translateY(16px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+  .reveal{ animation:fadeUp .7s ease both; }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="brand" href="#top">
+      <span class="brand-name">Hood Law</span>
+      <span class="brand-sub">Rhonda Steadman Hood, LLC</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#top">Home</a></li>
+      <li><a href="#why">Why Hood Law</a></li>
+      <li><a href="#practice">Practice Areas</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="only-mobile"><a class="btn btn-outline" href="tel:12053234123">Call 205-323-4123</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="nav-call" href="tel:12053234123" aria-label="Call Hood Law at 205-323-4123">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="phone-link">205-323-4123</span>
+      </a>
+      <a class="btn btn-primary" href="#contact">Free Consultation</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-label="Introduction">
+    <svg class="hero-horizon" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="skyfade" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#1f6f93" stop-opacity="0.35"/>
+          <stop offset="1" stop-color="#1f6f93" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="1200" height="700" fill="url(#skyfade)"/>
+      <!-- distant skyline -->
+      <g fill="#ffffff" opacity="0.06">
+        <rect x="60" y="420" width="40" height="220"/>
+        <rect x="110" y="380" width="30" height="260"/>
+        <rect x="150" y="450" width="50" height="190"/>
+        <rect x="900" y="400" width="34" height="240"/>
+        <rect x="944" y="440" width="60" height="200"/>
+        <rect x="1015" y="360" width="30" height="280"/>
+        <rect x="1055" y="420" width="46" height="220"/>
+      </g>
+      <!-- scales of justice motif, simplified -->
+      <g stroke="#e8b263" stroke-width="3" fill="none" opacity="0.5" stroke-linecap="round">
+        <line x1="600" y1="120" x2="600" y2="330"/>
+        <line x1="470" y1="170" x2="730" y2="170"/>
+        <circle cx="470" cy="170" r="0" />
+        <path d="M430 170 L470 250 L510 170 Z" opacity="0.35"/>
+        <path d="M690 170 L730 250 L770 170 Z" opacity="0.35"/>
+        <line x1="540" y1="330" x2="660" y2="330"/>
+      </g>
+    </svg>
+    <div class="hero-inner">
+      <p class="eyebrow">Rhonda Steadman Hood, LLC · Consumer Litigation</p>
+      <h1>Protecting Your Rights, Defending Your Home</h1>
+      <p class="hero-lede">Consumer litigation, foreclosure defense, mortgage servicing issues, and real estate redemption representation for clients across Alabama and North Florida.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:12053234123">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          205-323-4123
+        </a>
+        <a class="btn btn-ghost" href="#practice">See Practice Areas</a>
+      </div>
+      <div class="hero-badges">
+        <div class="hero-badge"><b>2</b><span>Offices — Alabama &amp; Florida</span></div>
+        <div class="hero-badge"><b>5</b><span>Practice areas</span></div>
+        <div class="hero-badge"><b>1:1</b><span>Direct access to your attorney</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INTRO BAND ============ -->
+  <section class="intro-band">
+    <div class="wrap reveal">
+      <h2>Hood Law Is Here for You</h2>
+      <p>At Hood Law, we focus on consumer litigation, foreclosure defense, mortgage servicing issues, and real estate redemption. We are here to listen to you and help you navigate the legal system.</p>
+    </div>
+  </section>
+
+  <!-- ============ WHY ============ -->
+  <section id="why" class="wrap why">
+    <div class="why-block reveal">
+      <p class="eyebrow">Why Hood Law</p>
+      <h2>Why Should You Hire Hood Law?</h2>
+      <p>Legal problems can be incredibly stressful. During this challenging time, a dedicated and reliable attorney can make a significant difference in the outcome of your matter. Hood Law is focused solely on the needs of my clients. I provide professional and effective representation.</p>
+    </div>
+
+    <div class="why-block reveal">
+      <h2>Skilled Legal Advice In Alabama &amp; North Florida</h2>
+      <p>At Hood Law, people from Alabama and North Florida get the skilled legal advice and representation they're looking for when they need an attorney.</p>
+      <p>I have a thorough understanding of Alabama and Florida law. With exceptional legal skills, practical solutions, and professional integrity, I work hard to help you get the best possible results in the following practice areas:</p>
+
+      <ul class="why-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Consumer Litigation</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Foreclosure Defense</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Mortgage Servicing Issues</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Real Estate Redemption</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Predatory Towing</li>
+      </ul>
+
+      <p>I pride myself on developing real connections with clients. I put complex legal issues into language that you can easily understand. I work hard to help our clients in every situation. I treat clients with respect and spend time to make sure that they fully understand the process they are going through.</p>
+      <p>When you need counsel on a major, life-impacting decision, you deserve an attorney who will listen to you, thoroughly examine the facts, and provide the best possible solution for you and your future.</p>
+    </div>
+
+    <div class="why-block reveal">
+      <h2>Contact Hood Law Today For A Consultation</h2>
+      <p>I have advocated for my Alabama and North Florida clients for many years. There's no need to handle these difficult matters of law all alone. Get the legal advice, counsel, and representation you need. Contact Hood Law today for a consultation. I can help you decide which course of action will serve your best interests.</p>
+      <a class="btn btn-outline" href="tel:12053234123">Call 205-323-4123</a>
+    </div>
+  </section>
+
+  <!-- ============ PRACTICE AREAS ============ -->
+  <section id="practice" class="practice">
+    <div class="wrap">
+      <div class="practice-head reveal">
+        <p class="eyebrow">What We Handle</p>
+        <h2>Practice Areas</h2>
+        <p>Focused representation across five areas where Alabama and North Florida clients need it most.</p>
+      </div>
+
+      <div class="practice-grid">
+        <article class="practice-card">
+          <div class="practice-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+              <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+              <path d="M7 21h10"/>
+              <path d="M12 3v18"/>
+              <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>
+            </svg>
+          </div>
+          <h3>Consumer Litigation</h3>
+          <p>Standing up for individuals against unfair, deceptive, or unlawful business practices.</p>
+        </article>
+
+        <article class="practice-card">
+          <div class="practice-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 11 12 4l9 7"/>
+              <path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/>
+              <path d="M9.5 12.5 12 10l2.5 2.5"/>
+            </svg>
+          </div>
+          <h3>Foreclosure Defense</h3>
+          <p>Fighting to keep families in their homes when lenders move to foreclose.</p>
+        </article>
+
+        <article class="practice-card">
+          <div class="practice-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 3h7l4 4v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/>
+              <path d="M14 3v4h4"/>
+              <path d="m9.5 17 5-5"/><circle cx="10" cy="12.5" r="0.6" fill="currentColor"/><circle cx="14" cy="16.5" r="0.6" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Mortgage Servicing Issues</h3>
+          <p>Holding loan servicers accountable for errors, mishandled payments, and unlawful conduct.</p>
+        </article>
+
+        <article class="practice-card">
+          <div class="practice-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="8" cy="15" r="4"/>
+              <path d="M11 12 20 3"/><path d="M16 3h4v4"/><path d="M14 9l2 2"/>
+            </svg>
+          </div>
+          <h3>Real Estate Redemption</h3>
+          <p>Guiding homeowners through their right to reclaim property after a foreclosure sale.</p>
+        </article>
+
+        <article class="practice-card">
+          <div class="practice-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 16V9a1 1 0 0 1 1-1h7l4 4h4a2 2 0 0 1 2 2v2"/>
+              <circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/>
+              <path d="M9 17h6"/>
+              <path d="m19 5 2 2m0-2-2 2" />
+            </svg>
+          </div>
+          <h3>Predatory Towing</h3>
+          <p>Pushing back against unlawful tows, hidden fees, and abusive towing practices.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <p class="eyebrow reveal">Get In Touch</p>
+      <h2 class="reveal">Contact Us Today</h2>
+      <p class="reveal">Hood Law is committed to answering your questions about consumer litigation, foreclosure defense, mortgage servicing, and real estate redemption issues in Alabama and North Florida. I offer consultations and I'll gladly discuss your case with you at your convenience. Contact me today to schedule an appointment.</p>
+
+      <div class="offices reveal">
+        <div class="office-card">
+          <h3>Hood Law — Florida</h3>
+          <address>
+            19715 Panama City Beach Parkway<br>
+            Panama City Beach, FL 32413
+          </address>
+          <div class="office-phones">
+            <a class="phone-link" href="tel:18504272889">850-427-2889</a>
+            <span class="fax phone-link">888-335-0009 (fax)</span>
+          </div>
+        </div>
+
+        <div class="office-card">
+          <h3>Hood Law — Alabama</h3>
+          <address>
+            1117 22nd Street South, Ste. 101-A<br>
+            Birmingham, AL 35205
+          </address>
+          <div class="office-phones">
+            <a class="phone-link" href="tel:12053234123">205-323-4123</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>Copyright © <span id="year">2026</span> Rhonda Steadman Hood, LLC</span>
+    <ul class="footer-links">
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Anti-spam</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  toggle.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
