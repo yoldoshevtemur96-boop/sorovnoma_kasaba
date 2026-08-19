@@ -4,13 +4,33 @@
 Asl saytdagi barcha matn va ma'lumotlar (xizmatlar, ofis manzillari, telefon
 raqamlari) o'zgartirilmagan holda saqlangan — faqat vizual dizayn yangilangan.
 
+## Sahifalar
+
+- `index.html` — bosh sahifa
+- `contact.html` — "Contact Me" sahifasi (forma + ofis manzillari)
+
+Ikkalasi ham o'zida barcha narsani (CSS + JS) mujassam etgan mustaqil
+fayllar. Tashqi kutubxona yoki build jarayoni kerak emas.
+
 ## Ishlatish
 
-`index.html` — bitta, o'zida barcha narsani (CSS + JS) mujassam etgan
-mustaqil fayl. Tashqi kutubxona yoki build jarayoni kerak emas.
+Fayllarni to'g'ridan-to'g'ri brauzerda oching yoki istalgan statik
+hosting'ga (Netlify, Vercel, GitHub Pages, cPanel va h.k.) yuklang.
 
-Faylni to'g'ridan-to'g'ri brauzerda oching yoki istalgan statik hosting'ga
-(Netlify, Vercel, GitHub Pages, cPanel va h.k.) yuklang.
+## ⚠️ Deploy qilishdan oldin: kontakt formasi
+
+`contact.html`dagi forma hozircha hech qanday backend'ga ulanmagan. Yuborish
+tugmasi bosilganda tashrif buyuruvchining email ilovasi (mailto:) ochiladi,
+xabar oldindan to'ldirilgan holda. Bu ishlaydi, lekin ikkita narsani hal
+qilish kerak:
+
+1. `contact.html` faylida `CONTACT_EMAIL` o'zgaruvchisini (`your-email@rshoodlaw.com`)
+   firmaning haqiqiy elektron pochtasiga almashtiring
+2. Agar mailto: o'rniga forma to'g'ridan-to'g'ri serverga yuborilishini
+   xohlasangiz, [Formspree](https://formspree.io) yoki
+   [Netlify Forms](https://www.netlify.com/platform/core/forms/) kabi
+   xizmatlardan foydalanib, `contactForm`ning submit handler'ini
+   almashtiring
 
 ## Xususiyatlari
 

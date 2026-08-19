@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Hood Law | Rhonda Steadman Hood, LLC — Alabama &amp; North Florida</title>
+<meta name="description" content="Reach Hood Law by phone or message. Offices in Panama City Beach, FL and Birmingham, AL, serving consumer litigation, foreclosure defense, and real estate clients." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ============ Tokens (shared with index.html) ============ */
+  :root{
+    --ink:#12222d;
+    --ink-soft:#2c3f4b;
+    --paper:#f3f6f7;
+    --paper-raised:#ffffff;
+    --harbor:#1f6f93;
+    --harbor-deep:#12495f;
+    --harbor-pale:#dcedf2;
+    --gold:#c98a35;
+    --gold-deep:#9c6a24;
+    --line:#d6e1e4;
+    --shadow: 0 20px 45px -25px rgba(18,34,45,0.35);
+    --radius: 14px;
+    --maxw: 1120px;
+    --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
+    --font-body: "Public Sans", -apple-system, "Segoe UI", sans-serif;
+
+    --band-deep:#0a1a24;
+    --band-mid:#123449;
+    --band-harbor:#1f6f93;
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#eef3f4;
+      --ink-soft:#c3d2d6;
+      --paper:#0d1a21;
+      --paper-raised:#122631;
+      --harbor:#6fb6d6;
+      --harbor-deep:#a7d6e9;
+      --harbor-pale:#173341;
+      --gold:#e8ab5c;
+      --gold-deep:#f2c489;
+      --line:#1f3540;
+      --shadow: 0 20px 45px -25px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#eef3f4;
+    --ink-soft:#c3d2d6;
+    --paper:#0d1a21;
+    --paper-raised:#122631;
+    --harbor:#6fb6d6;
+    --harbor-deep:#a7d6e9;
+    --harbor-pale:#173341;
+    --gold:#e8ab5c;
+    --gold-deep:#f2c489;
+    --line:#1f3540;
+    --shadow: 0 20px 45px -25px rgba(0,0,0,0.6);
+  }
+
+  /* ============ Reset-ish ============ */
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *,*::before,*::after{ animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important; }
+  }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{ display:block; max-width:100%; }
+  a{ color:inherit; }
+  h1,h2,h3{
+    font-family:var(--font-display);
+    font-weight:600;
+    line-height:1.12;
+    text-wrap:balance;
+    margin:0 0 0.5em;
+    color:var(--ink);
+  }
+  p{ margin:0 0 1em; color:var(--ink-soft); max-width:62ch; }
+  .eyebrow{
+    font-family:var(--font-body);
+    font-weight:700;
+    font-size:0.78rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    margin:0 0 0.9em;
+    display:inline-flex;
+    align-items:center;
+    gap:0.6em;
+  }
+  .eyebrow::before{
+    content:"";
+    width:28px; height:2px;
+    background:var(--gold);
+    display:inline-block;
+  }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+  section{ padding:88px 0; }
+  @media (max-width:640px){ section{ padding:64px 0; } }
+
+  .btn{
+    display:inline-flex; align-items:center; gap:0.6em;
+    font-family:var(--font-body); font-weight:700; font-size:0.98rem;
+    padding:14px 26px; border-radius:999px;
+    text-decoration:none; cursor:pointer; border:1.5px solid transparent;
+    transition:transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color .18s ease;
+  }
+  .btn:focus-visible{ outline:3px solid var(--gold); outline-offset:3px; }
+  .btn-primary{ background:var(--gold); color:#22160a; box-shadow:0 12px 24px -12px rgba(201,138,53,0.55); }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 16px 30px -12px rgba(201,138,53,0.65); }
+  .btn-ghost{ background:transparent; border-color:rgba(255,255,255,0.55); color:#fff; }
+  .btn-ghost:hover{ background:rgba(255,255,255,0.12); transform:translateY(-2px); }
+  .btn-outline{ background:transparent; border-color:var(--harbor); color:var(--harbor); }
+  .btn-outline:hover{ background:var(--harbor-pale); transform:translateY(-2px); }
+  .btn[disabled]{ opacity:0.6; cursor:not-allowed; transform:none !important; }
+
+  .phone-link{ font-variant-numeric:tabular-nums; white-space:nowrap; }
+
+  /* ============ Header ============ */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter:saturate(140%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    max-width:var(--maxw); margin:0 auto; padding:16px 24px;
+    display:flex; align-items:center; justify-content:space-between; gap:24px;
+  }
+  .brand{ display:flex; flex-direction:column; text-decoration:none; line-height:1.05; }
+  .brand-name{ font-family:var(--font-display); font-weight:700; font-size:1.4rem; color:var(--ink); }
+  .brand-sub{ font-size:0.66rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--harbor); font-weight:700; margin-top:4px; }
+  .nav-links{ display:flex; align-items:center; gap:32px; list-style:none; margin:0; padding:0; }
+  .nav-links a{
+    text-decoration:none; font-weight:600; font-size:0.95rem; color:var(--ink-soft);
+    position:relative; padding:4px 0;
+  }
+  .nav-links a::after{
+    content:""; position:absolute; left:0; right:100%; bottom:-2px; height:2px; background:var(--gold);
+    transition:right .22s ease;
+  }
+  .nav-links a:hover::after, .nav-links a:focus-visible::after{ right:0; }
+  .nav-links a[aria-current="page"]{ color:var(--harbor-deep); }
+  .nav-links a[aria-current="page"]::after{ right:0; }
+  .nav-cta{ display:flex; align-items:center; gap:14px; }
+  .nav-call{
+    display:inline-flex; align-items:center; gap:8px; text-decoration:none;
+    font-weight:700; color:var(--harbor-deep); font-size:0.95rem;
+  }
+  .nav-call svg{ width:18px; height:18px; }
+  .nav-toggle{
+    display:none; background:none; border:1.5px solid var(--line); border-radius:10px;
+    width:42px; height:42px; align-items:center; justify-content:center; cursor:pointer;
+  }
+  .nav-toggle svg{ width:20px; height:20px; }
+  .only-mobile{ display:none; }
+
+  @media (max-width:860px){
+    .only-mobile{ display:block; margin-top:6px; }
+    .nav-links{
+      position:absolute; top:100%; left:0; right:0; flex-direction:column; align-items:flex-start;
+      background:var(--paper-raised); border-bottom:1px solid var(--line);
+      padding:20px 24px; gap:18px; box-shadow:var(--shadow);
+      display:none;
+    }
+    .nav-links.open{ display:flex; }
+    .nav-toggle{ display:inline-flex; }
+    .nav-cta .btn-primary{ display:none; }
+  }
+
+  /* ============ Page hero band ============ */
+  .page-hero{
+    position:relative; overflow:hidden;
+    background: radial-gradient(120% 140% at 15% 0%, var(--band-mid) 0%, var(--band-deep) 62%);
+    color:#fff; text-align:center;
+  }
+  .page-hero .wrap{ position:relative; z-index:2; padding-top:20px; padding-bottom:20px; }
+  .page-hero .eyebrow{ color:var(--gold); justify-content:center; }
+  .page-hero .eyebrow::before{ background:var(--gold); }
+  .page-hero h1{ color:#fff; font-size:clamp(2.1rem, 4.4vw, 3.1rem); }
+  .page-hero p{ color:rgba(255,255,255,0.82); max-width:56ch; margin:0 auto 1.8em; font-size:1.05rem; }
+  .page-hero-horizon{ position:absolute; inset:0; z-index:1; opacity:0.5; pointer-events:none; }
+
+  /* ============ Contact layout ============ */
+  .contact-grid{
+    display:grid; grid-template-columns: 1.1fr 0.9fr; gap:56px; align-items:start;
+  }
+  @media (max-width:900px){ .contact-grid{ grid-template-columns:1fr; } }
+
+  .form-card{
+    background:var(--paper-raised); border:1px solid var(--line); border-radius:var(--radius);
+    padding:36px; box-shadow:var(--shadow);
+  }
+  .form-card h2{ font-size:1.5rem; }
+  .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  @media (max-width:520px){ .form-row{ grid-template-columns:1fr; } }
+  .field{ display:flex; flex-direction:column; gap:6px; margin-bottom:20px; }
+  .field label{ font-weight:600; font-size:0.9rem; color:var(--ink); }
+  .field .req{ color:var(--gold-deep); }
+  .field input, .field textarea{
+    font: inherit; font-size:1rem; padding:12px 14px; border-radius:10px;
+    border:1.5px solid var(--line); background:var(--paper); color:var(--ink);
+    transition:border-color .18s ease, box-shadow .18s ease;
+  }
+  .field input:focus, .field textarea:focus{
+    outline:none; border-color:var(--harbor); box-shadow:0 0 0 3px var(--harbor-pale);
+  }
+  .field textarea{ min-height:140px; resize:vertical; }
+  .form-note{ font-size:0.85rem; color:var(--ink-soft); margin:14px 0 0; }
+  .form-status{
+    margin:0 0 20px; padding:14px 16px; border-radius:10px; font-size:0.92rem;
+    display:none; font-weight:600;
+  }
+  .form-status.show{ display:block; }
+  .form-status.ok{ background:var(--harbor-pale); color:var(--harbor-deep); }
+  .form-status.err{ background:#f6e2df; color:#8a3324; }
+
+  /* ============ Locator ============ */
+  .locator-card{
+    background:var(--band-deep); color:#fff; border-radius:var(--radius);
+    padding:28px; margin-bottom:24px; overflow:hidden; position:relative;
+  }
+  .locator-card svg{ width:100%; height:auto; }
+  .locator-caption{ font-size:0.8rem; color:rgba(255,255,255,0.6); margin-top:10px; }
+
+  .offices{ display:grid; grid-template-columns:1fr; gap:16px; }
+  .office-card{
+    background:var(--paper-raised); border:1px solid var(--line); border-radius:var(--radius);
+    padding:24px;
+  }
+  .office-card h3{
+    color:var(--gold-deep); font-family:var(--font-body); font-weight:800; font-size:0.8rem;
+    text-transform:uppercase; letter-spacing:0.1em; margin-bottom:12px;
+  }
+  .office-card address{ font-style:normal; color:var(--ink-soft); margin-bottom:14px; line-height:1.7; }
+  .office-card .office-phones{ display:flex; flex-direction:column; gap:6px; }
+  .office-card a{ text-decoration:none; font-weight:700; color:var(--ink); }
+  .office-card a:hover{ color:var(--harbor); }
+  .office-card .fax{ color:var(--ink-soft); font-weight:500; font-size:0.9rem; }
+
+  /* ============ Footer ============ */
+  footer{ background:var(--band-deep); border-top:1px solid rgba(255,255,255,0.12); padding:28px 0; color:#fff; }
+  .footer-inner{
+    display:flex; flex-wrap:wrap; justify-content:space-between; gap:14px; align-items:center;
+    color:rgba(255,255,255,0.6); font-size:0.85rem;
+  }
+  .footer-links{ display:flex; gap:20px; list-style:none; margin:0; padding:0; }
+  .footer-links a{ color:rgba(255,255,255,0.6); text-decoration:none; }
+  .footer-links a:hover{ color:#fff; }
+
+  @keyframes fadeUp{
+    from{ opacity:0; transform:translateY(16px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+  .reveal{ animation:fadeUp .7s ease both; }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <span class="brand-name">Hood Law</span>
+      <span class="brand-sub">Rhonda Steadman Hood, LLC</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#why">Why Hood Law</a></li>
+      <li><a href="index.html#practice">Practice Areas</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+      <li class="only-mobile"><a class="btn btn-outline" href="tel:12053234123">Call 205-323-4123</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="nav-call" href="tel:12053234123" aria-label="Call Hood Law at 205-323-4123">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="phone-link">205-323-4123</span>
+      </a>
+      <a class="btn btn-primary" href="contact.html">Free Consultation</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero" aria-label="Contact introduction">
+    <svg class="page-hero-horizon" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="skyfade2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#1f6f93" stop-opacity="0.3"/>
+          <stop offset="1" stop-color="#1f6f93" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="1200" height="400" fill="url(#skyfade2)"/>
+      <g fill="#ffffff" opacity="0.05">
+        <rect x="80" y="220" width="36" height="180"/>
+        <rect x="126" y="180" width="26" height="220"/>
+        <rect x="980" y="200" width="30" height="200"/>
+        <rect x="1020" y="240" width="50" height="160"/>
+      </g>
+    </svg>
+    <div class="wrap">
+      <p class="eyebrow reveal">Get In Touch</p>
+      <h1 class="reveal">Contact Me</h1>
+      <p class="reveal">Send a message about your situation, or call directly — I return every message personally.</p>
+      <a class="btn btn-primary reveal" href="tel:12053234123">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        205-323-4123
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT GRID ============ -->
+  <section>
+    <div class="wrap contact-grid">
+
+      <div class="form-card reveal">
+        <h2>Send a Message</h2>
+        <p>Tell me a little about your situation and the best way to reach you. Fields marked <span class="req">*</span> are required.</p>
+
+        <div id="formStatus" class="form-status" role="status"></div>
+
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="phone">Phone <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="message">Message <span class="req">*</span></label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-note">Prefer to talk now? Call <a class="phone-link" href="tel:12053234123" style="color:var(--harbor);font-weight:700;">205-323-4123</a>.</p>
+        </form>
+      </div>
+
+      <div class="reveal">
+        <div class="locator-card">
+          <svg viewBox="0 0 360 260" role="img" aria-label="Map showing Hood Law offices in Alabama and Florida">
+            <g stroke="rgba(255,255,255,0.12)" stroke-width="1">
+              <line x1="0" y1="65" x2="360" y2="65"/>
+              <line x1="0" y1="130" x2="360" y2="130"/>
+              <line x1="0" y1="195" x2="360" y2="195"/>
+              <line x1="90" y1="0" x2="90" y2="260"/>
+              <line x1="180" y1="0" x2="180" y2="260"/>
+              <line x1="270" y1="0" x2="270" y2="260"/>
+            </g>
+            <path d="M40 40 C 120 20, 220 30, 320 60 C 300 120, 260 170, 220 230 C 150 240, 90 220, 50 180 C 30 140, 30 80, 40 40 Z"
+                  fill="rgba(31,111,147,0.35)" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+            <g>
+              <circle cx="150" cy="95" r="7" fill="#c98a35"/>
+              <circle cx="150" cy="95" r="12" fill="none" stroke="#c98a35" stroke-width="1.5" opacity="0.6"/>
+              <text x="164" y="92" fill="#fff" font-family="Public Sans, sans-serif" font-size="13" font-weight="700">Alabama</text>
+              <text x="164" y="108" fill="rgba(255,255,255,0.65)" font-family="Public Sans, sans-serif" font-size="11">Birmingham</text>
+            </g>
+            <g>
+              <circle cx="205" cy="185" r="7" fill="#c98a35"/>
+              <circle cx="205" cy="185" r="12" fill="none" stroke="#c98a35" stroke-width="1.5" opacity="0.6"/>
+              <text x="219" y="182" fill="#fff" font-family="Public Sans, sans-serif" font-size="13" font-weight="700">Florida</text>
+              <text x="219" y="198" fill="rgba(255,255,255,0.65)" font-family="Public Sans, sans-serif" font-size="11">Panama City Beach</text>
+            </g>
+          </svg>
+          <p class="locator-caption">Serving clients across Alabama and North Florida from two offices.</p>
+        </div>
+
+        <div class="offices">
+          <div class="office-card">
+            <h3>Hood Law — Florida</h3>
+            <address>
+              19715 Panama City Beach Parkway<br>
+              Panama City Beach, FL 32413
+            </address>
+            <div class="office-phones">
+              <a class="phone-link" href="tel:18504272889">850-427-2889</a>
+              <span class="fax phone-link">888-335-0009 (fax)</span>
+            </div>
+          </div>
+
+          <div class="office-card">
+            <h3>Hood Law — Alabama</h3>
+            <address>
+              1117 22nd Street South, Ste. 101-A<br>
+              Birmingham, AL 35205
+            </address>
+            <div class="office-phones">
+              <a class="phone-link" href="tel:12053234123">205-323-4123</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>Copyright © <span id="year">2026</span> Rhonda Steadman Hood, LLC</span>
+    <ul class="footer-links">
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Anti-spam</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  toggle.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // -----------------------------------------------------------------------
+  // Contact form
+  //
+  // No backend is wired up yet. On submit this opens the visitor's email
+  // app with the message pre-filled, addressed to CONTACT_EMAIL below.
+  //
+  // TODO (site owner): replace CONTACT_EMAIL with the firm's real inbox,
+  // or swap this handler for a form service (Formspree, Netlify Forms,
+  // etc.) if you'd rather not rely on the visitor's local email client.
+  // -----------------------------------------------------------------------
+  var CONTACT_EMAIL = "your-email@rshoodlaw.com";
+
+  var form = document.getElementById('contactForm');
+  var status = document.getElementById('formStatus');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    var name = form.name.value.trim();
+    var phone = form.phone.value.trim();
+    var email = form.email.value.trim();
+    var message = form.message.value.trim();
+
+    var subject = "Website inquiry from " + name;
+    var bodyLines = [
+      "Name: " + name,
+      "Phone: " + phone,
+      "Email: " + (email || "(not provided)"),
+      "",
+      message
+    ];
+    var mailto = "mailto:" + encodeURIComponent(CONTACT_EMAIL) +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(bodyLines.join("\n"));
+
+    status.textContent = "Opening your email app with this message pre-filled — send it from there, or call 205-323-4123 instead.";
+    status.className = "form-status show ok";
+
+    window.location.href = mailto;
+  });
+</script>
+</body>
+</html>
