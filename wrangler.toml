@@ -1,5 +1,6 @@
 name = "hood-law-redesign"
 compatibility_date = "2026-08-19"
+workers_dev = true
 
 [assets]
 directory = "hood-law-redesign"
